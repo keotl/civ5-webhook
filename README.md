@@ -13,7 +13,7 @@ LoggingEnabled = 1
 
 3. Copy `WatchLog.ps1` to `Documents/My Games/Sid Meier's Civilization 5/Logs`. Change `https://my-endpoint.com` to be whatever endpoint you want.
 
-4. Make sure that powershell scripts are enabled on your system. (https:/go.microsoft.com/fwlink/?LinkID=135170)[https:/go.microsoft.com/fwlink/?LinkID=135170]
+4. Make sure that powershell scripts are enabled on your system. [https:/go.microsoft.com/fwlink/?LinkID=135170](https:/go.microsoft.com/fwlink/?LinkID=135170)
 
 5. Start the game.
 
