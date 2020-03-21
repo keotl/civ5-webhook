@@ -1,4 +1,4 @@
-# Civ5 Pitboss WebHook
+# Civ5 Pitboss Webhook
 Adds webhooks to Sid Meier's Civilization 5 games. Install this on your pitboss server to be notified anytime a player starts/ends their turn or connects/disconnects.
 
 ## How to use
@@ -18,6 +18,30 @@ LoggingEnabled = 1
 5. Start the game.
 
 6. Run the `Watchlog.ps1` script. Note that you may need to manually open a powershell console, `cd` to the logs directory, and then run the script. Windows does not seem able to automatically open a powershell console in a folder which contains an apostrophe `'`, which is the case with the default game directory.
+
+## Game State Payload
+Civ5 Pitboss Webhook will send an HTTP POST request with a JSON body. 
+```json
+{
+    "gameTurn": 118,
+    "players": [
+        {
+            "id": 1,
+            "nickName": "Atreides",
+            "isTurnComplete": false,
+            "isOnline": true,
+            "isAlive": true
+        },
+        {
+            "id": 2,
+            "nickName": "bobby_joe",
+            "isTurnComplete": true,
+            "isOnline": false,
+            "isAlive": true
+        }
+     ]
+}
+```
 
 ## Troubleshooting
 
