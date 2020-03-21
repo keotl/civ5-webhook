@@ -1,0 +1,1 @@
+Get-Content .\Lua.log -Wait | select-string "JSON" | % {[Regex]::Matches($_, '----JSON----(.+)----JSON----').Groups[1]} | Select -ExpandProperty Value | % {Invoke-WebRequest -Uri https://my-endpoint.com -Method POST -Headers @{'Content-Type' = 'application/json'} -UseBasicParsing -Body $_}
