@@ -6,6 +6,7 @@ function listener()
       playerTurns = playerTurns .. "{" ..
               '"id" : ' .. tostring(a:GetID()) .. "," ..
               '"nickName" : ' .. '"' .. a:GetNickName() .. '"' .. "," ..
+              '"civilization" : ' .. '"' .. a:GetCivilizationShortDescription() .. '"' .. "," ..
               '"isTurnComplete" : ' .. tostring(a:HasReceivedNetTurnComplete()) .. "," ..
               '"isOnline" : ' .. tostring(Network.IsPlayerConnected(a:GetID())) .. "," ..
               '"isAlive" : ' .. tostring(a:IsAlive()) ..

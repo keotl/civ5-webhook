@@ -28,6 +28,7 @@ Civ5 Pitboss Webhook will send an HTTP POST request with a JSON body.
         {
             "id": 1,
             "nickName": "Atreides",
+            "civilization": "Morocco",
             "isTurnComplete": false,
             "isOnline": true,
             "isAlive": true
@@ -35,6 +36,7 @@ Civ5 Pitboss Webhook will send an HTTP POST request with a JSON body.
         {
             "id": 2,
             "nickName": "bobby_joe",
+            "civilization": "America",
             "isTurnComplete": true,
             "isOnline": false,
             "isAlive": true
