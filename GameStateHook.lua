@@ -10,7 +10,7 @@ end
 function listener()
   local playerTurns = ""
   for i,a in pairs(Players) do
-    if a:IsEverAlive() and a:IsHuman() then
+    if a:IsEverAlive() then
       local allies = {}
       local enemies = {}
       for j,b in pairs(Players) do
@@ -24,6 +24,7 @@ function listener()
       playerTurns = playerTurns .. "{" ..
           '"id" : ' .. tostring(a:GetID()) .. "," ..
           '"nickName" : ' .. '"' .. a:GetNickName() .. '"' .. "," ..
+          '"isHuman" : ' .. tostring(a:IsHuman()) .. "," ..
           '"civilization" : ' .. '"' .. a:GetCivilizationShortDescription() .. '"' .. "," ..
           '"isTurnComplete" : ' .. tostring(a:HasReceivedNetTurnComplete()) .. "," ..
           '"isOnline" : ' .. tostring(Network.IsPlayerConnected(a:GetID())) .. "," ..
