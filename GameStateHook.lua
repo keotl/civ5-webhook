@@ -10,7 +10,7 @@ end
 function listener()
   local playerTurns = ""
   for i,a in pairs(Players) do
-    if a:IsEverAlive() then
+    if a:IsEverAlive() and (not a:IsMinorCiv()) then
       local allies = {}
       local enemies = {}
       for j,b in pairs(Players) do
