@@ -37,7 +37,10 @@ function listener()
     end
   end
   local gameState = ""
-  gameState = gameState .. "{" .. '"isUnitedNationActive" : ' .. tostring(Game.IsUnitedNationsActive())  .. "}"
+  gameState = gameState .. "{" .. '"isUnitedNationActive" : ' .. tostring(Game.IsUnitedNationsActive())  .. "," ..
+   '"winner" : ' .. tostring(Game.GetWinner()) .. "," ..
+   '"victoryType" : ' .. tostring(Game.GetVictory()) ..
+  "}"
   
   print("----JSON----{" .. '"gameTurn" : ' .. tostring(Game.GetGameTurn()) ..","  .. '"players" : [' .. playerTurns:sub(1, -2) .. "]," .. '"game": ' .. gameState .. "}----JSON----")
 end
