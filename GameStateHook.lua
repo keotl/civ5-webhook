@@ -27,6 +27,7 @@ function listener()
           '"isHuman" : ' .. tostring(a:IsHuman()) .. "," ..
           '"civilization" : ' .. '"' .. a:GetCivilizationShortDescription() .. '"' .. "," ..
           '"isTurnComplete" : ' .. tostring(a:HasReceivedNetTurnComplete()) .. "," ..
+          '"isTurnActive" : ' .. tostring(a:IsTurnActive()) .. "," ..
           '"isOnline" : ' .. tostring(Network.IsPlayerConnected(a:GetID())) .. "," ..
           '"isAlive" : ' .. tostring(a:IsAlive()) .. "," ..
           '"currentEra" : ' .. a:GetCurrentEra() .. "," ..
